@@ -54,7 +54,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 30px;
     opacity: 0;
     transition: 0.3s;
     animation: slideTop 1s ease forwards;
@@ -127,14 +127,14 @@ body {
 
 
 .home-img img {
-    max-width: 250px;
+    max-width: 200px;
     border-radius: 50%;
     margin-right: -20px;
     box-shadow: 0 0 20px #b7b2a9;
     /* 设置阴影效果 */
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImg 4s ease-in-out infinite;
-    animation-delay: 2s 3s;
+    animation-delay: 2s;
 }
 
 .social-media a {
