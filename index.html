@@ -18,7 +18,7 @@
     </a>
     <nav class="navbar">
         <a href="#" class="item" style="--i:1">Home</a>
-        <a href="#" class="item" style="--i:2">About</a>
+        <a href="#" class="item" style="--i:2">Chat</a>
         <a href="#" class="item" style="--i:3">Skills</a>
         <a href="#" class="item" style="--i:4">Me</a>
     </nav>
@@ -39,6 +39,14 @@
             <a href="#" style="--i:10"><i class='bx bx-paper-plane'></i></a>
         </div>
         <a href="#" class="btn">Learn More</a>
+    </div>
+    <div class="home-img">
+        <img src="./homePage.jpg" alt="">
+    </div>
+</section>
+<section class="chat">
+    <div >
+        <iframe style="width: 800px; height: 500px" src="https://chat.miniming.icu"></iframe>
     </div>
     <div class="home-img">
         <img src="./homePage.jpg" alt="">
@@ -79,6 +87,33 @@
     }
 
     main(str)
+
+    // 获取导航链接和页面元素
+    const navLinks = document.querySelectorAll('.navbar .item');
+    const sections = {
+        home: document.querySelector('.home'),
+        chat: document.querySelector('.chat')
+    };
+
+    // 默认显示home部分
+    sections.home.style.display = 'flex';
+
+    // 为每个导航链接添加点击事件处理程序
+    navLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const linkText = link.innerText.toLowerCase();
+            for (const section in sections) {
+                sections[section].style.display = 'none';
+            }
+            if (linkText === 'home') {
+                sections.home.style.display = 'flex';
+            } else if (linkText === 'chat') {
+                sections.chat.style.display = 'flex';
+            }
+        });
+    });
+
 </script>
 </body>
 
