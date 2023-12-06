@@ -41,7 +41,7 @@
         <a href="#" class="btn">Learn More</a>
     </div>
     <div class="home-img">
-        <img src="./homePage.jpg" alt="">
+        <img src="./walk.gif" alt="">
     </div>
 </section>
 <section class="chat">
@@ -54,6 +54,13 @@
 </section>
 
 <script>
+    document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState == 'hidden') {
+            normal_title = document.title;
+            document.title = '=_=不要走！再看看嘛！';
+        } else document.title = normal_title;
+    });
+    
     var text = document.querySelector('.text'); // 获取显示文本的元素
     var str = ['一名充满好奇心和创造力的白日梦想家.', '喜欢钻研各种与计算机相关的技术。', '练习时长一年半的脱发程序员！']; // 要打印的字符串数组
     function writeText(t, delay = 200) {
